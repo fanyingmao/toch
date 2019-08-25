@@ -1,6 +1,6 @@
 # toch
 
-通过命令行将各国语言翻译成中文
+通过命令行将各国语包含（英，德，法，日等主流语言）翻译成中文
 
 ## 安装命令
 
@@ -11,13 +11,28 @@ npm i toch -g
 ## 使用命令
 
 ```bash
-toch 'No swap file, use memory only'
+toch No swap file, use memory only
+```
+
+## 对命令的英文说明作出翻译
+
+这个是对多行翻译，要小心如果翻译的条数太多，第三方接口会调用失败
+例如对 rsync 帮助进行翻译
+
+```bash
+rsync -h|xargs  -0   toch
 ```
 
 ## 配置翻译接口源
 
 默认使用 google 翻译，可选百度翻译。翻译配置在环境变量中
+建议使用 google 翻译，排版会更好些
 
 ```bash
 export TOCH_SOURCE=baidu #可用参数 ['google','baidu']
 ```
+
+## 注意
+
+- 单次无法翻译太长的文字，否则第三方会报错。
+- 不能短时间调用多次，否则会被第三方禁用一段时间
