@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+const chalk = require('chalk');
+const ora = require('ora');
+const { youdao, baidu, google } = require('translation-jsapi')
+const en = process.argv[2];
+const spinner = ora(chalk.blue(en)).start();
+let source;
+switch (process.env.TOCH_SOURCE) {
+  case 'youdao':
+    source = youdao;
+    break;
+  case 'baidu':
+    source = baidu;
+    break;
+  default:
+    source = google;
+    break;
+}
+
+source.translate(en).then(result => {
+  if (result.result) {
+    spinner.succeed();
+    spinner.info(chalk.green(result.result));
+  }
+  else {
+    spinner.fail();
+    console.log(chalk.red('调用异常'));
+    console.error(result);
+  }
+})
+  .catch(err => {
+    spinner.fail();
+    console.log(chalk.red('执行报错'));
+    console.error(err.stack);
+  });

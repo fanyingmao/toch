@@ -1,0 +1,19 @@
+{
+  "name": "toch",
+  "version": "1.0.0",
+  "description": "将各国语言翻译成中文",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fanyingmao/toch.git"
+  },
+  "author": "fanyingmao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fanyingmao/toch/issues"
+  },
+  "homepage": "https://github.com/fanyingmao/toch#readme"
+}
