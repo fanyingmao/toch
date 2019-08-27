@@ -26,7 +26,7 @@ switch (process.env.TOCH_SOURCE) {
     break;
 }
 
-const spinner = ora(chalk.blue(`Waiting from:${formName}`)).start();
+const spinner = ora(chalk.cyan(`Waiting from:${formName}`)).start();
 en = en.replace(/\s{2,}/g, "\n");
 en = en.replace(/\n/g, splitFlag);
 
@@ -41,7 +41,7 @@ source.translate(en).then(res => {
   let result = res.result;
   spanTime = (Date.now() - startTime) / 1000;
   if (result) {
-    spinner.succeed(chalk.blue(`Succeed from:${formName} time:${spanTime}s`));
+    spinner.succeed(chalk.cyan(`Succeed from:${formName} time:${spanTime}s`));
     let enArr = en.split(splitFlag);
     let resultArr;
     if (typeof result === 'string') {
@@ -59,13 +59,13 @@ source.translate(en).then(res => {
     }
   }
   else {
-    spinner.fail(chalk.blue(`Fail from:${formName} time:${spanTime}s`));
+    spinner.fail(chalk.cyan(`Fail from:${formName} time:${spanTime}s`));
     console.log(chalk.red('调用异常'));
     console.error(result);
   }
 })
   .catch(err => {
-    spinner.fail(chalk.blue(`Fail from:${formName} time:${spanTime}s`));
+    spinner.fail(chalk.cyan(`Fail from:${formName} time:${spanTime}s`));
     console.log(chalk.red('执行报错'));
     console.error(err.stack);
   });
