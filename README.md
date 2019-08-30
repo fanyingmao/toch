@@ -27,10 +27,10 @@ toch 开发
 
 由于读取粘贴版,采用命令的方式
 操作系统|粘贴命令| 说明
--|-|-
-windows| 无|由于没找到命令所以不支持
-mac | pdpast| 原生可支持
-ubuntu |xclip| 需要安装 xclip 才可以支持,安装命令 sudo apt install xclip
+|-|-|-|
+|windows| 无|由于没找到命令所以不支持|
+|mac | pdpast| 原生可支持|
+|ubuntu |xclip| 需要安装 xclip 才可以支持,安装命令 sudo apt install xclip|
 使用只需要命令不带参数,就会从粘贴板读取数据进行翻译
 
 ```bash
