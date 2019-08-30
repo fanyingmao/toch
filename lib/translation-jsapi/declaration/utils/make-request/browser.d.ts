@@ -1,2 +1,0 @@
-import { RequestOptions } from './types';
-export default function (options: RequestOptions): Promise<any>;

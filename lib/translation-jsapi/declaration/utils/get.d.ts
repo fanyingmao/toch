@@ -1,5 +1,0 @@
-/**
- * 安全的获取一个变量上指定路径的值。
- * TODO: 使用 noshjs 代替
- */
-export default function (obj: any, pathArray: string | string[], defaultValue?: any): any;

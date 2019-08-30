@@ -6,7 +6,7 @@ const {
     youdao,
     baidu,
     google
-} = require('../lib/translation-jsapi');
+} = require('translation.js');
 const {
     getPast
 } = require('../lib/cmd/cmd');

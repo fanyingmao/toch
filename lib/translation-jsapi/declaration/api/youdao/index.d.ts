@@ -1,4 +1,0 @@
-import detect from './detect';
-import audio from './audio';
-import translate from './web';
-export { detect, audio, translate };
