@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 const chalk = require('chalk');
 const ora = require('ora');
-const { youdao, baidu, google } = require('../lib/translation-jsapi')
+const { youdao, baidu, google } = require('../lib/translation-jsapi');
+const { getPast } = require('../lib/cmd');
+
 const splitFlag = '\n';
 let en = '';
 for(let i = 2; i < process.argv.length;i++){
