@@ -9,7 +9,7 @@ const {
 } = require('../lib/translation-jsapi');
 const {
     getPast
-} = require('../lib/cmd');
+} = require('../lib/cmd/cmd');
 
 const splitFlag = '\n';
 
