@@ -1,7 +1,7 @@
 # toch
 
 通过命令行将各国语言翻译成中文,或将中文翻译成英文,可节约网站切换翻译的时间，结果展示将翻译结果放在原文下一行加上颜色差异方便对比.
-目前可选的翻译接口为:百度,谷歌
+目前可选的翻译接口为:百度,谷歌,有道
 
 ## 安装命令
 
@@ -29,9 +29,9 @@ toch 开发
 
 操作系统|粘贴命令| 说明
 -|-|-
-windows| 无|由于没找到命令所以不支持
-mac | pdpast| 原生可支持
-ubuntu |xclip| 需要安装 xclip 才可以支持,安装命令 sudo apt install xclip
+windows|无|由于没找到命令所以不支持
+mac|pdpaste|原生可支持
+ubuntu|xclip|需要安装 xclip 才可以支持,安装命令 sudo apt install xclip
 
 使用只需要命令不带参数,就会从粘贴板读取数据进行翻译
 
@@ -62,7 +62,7 @@ sed -n '100,200p' redis.conf|xargs -0 toch
 建议使用 google 翻译，排版会更好些
 
 ```bash
-export TOCH_SOURCE=baidu  #可用参数 ['google','baidu']
+export TOCH_SOURCE=baidu  #可用参数 ['google','baidu','youdao']
 ```
 
 ## 注意
