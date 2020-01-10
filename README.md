@@ -58,8 +58,7 @@ sed -n '100,200p' redis.conf|xargs -0 toch
 
 ## 配置翻译接口源
 
-默认使用 google 翻译，可选百度翻译。翻译配置在环境变量中
-建议使用 google 翻译，排版会更好些
+默认使用 youdao 翻译，翻译接口快些，可选其他翻译。翻译配置在环境变量中
 
 ```bash
 export TOCH_SOURCE=baidu  #可用参数 ['google','baidu','youdao']

@@ -16,7 +16,7 @@ const splitFlag = '\n';
 let spanTime = 0;
 let startTime = Date.now();
 let source;
-let formName = 'google';
+let formName = 'youdao';
 switch (process.env.TOCH_SOURCE) {
     case 'youdao':
         formName = 'youdao';
@@ -44,7 +44,8 @@ let en = '';
     }
     en = en.replace(/\s{2,}/g, "\n");
     en = en.replace(/\n/g, splitFlag);
-
+    en = en.replace(/^\s*\n/g, "");
+    
     if (!en || en === '') {
         spinner.fail(chalk.cyan(`Fail from:${formName} time:${spanTime}`));
         console.log(chalk.red('参数错误'));
@@ -70,10 +71,10 @@ let en = '';
             }
 
             for (let i = 0; i < enArr.length; i++) {
-                if (enArr[i] && resultArr[i]) {
+                // if (enArr[i] && resultArr[i]) {
                     console.log(enArr[i]);
                     console.log(chalk.green(resultArr[i]));
-                }
+                // }
             }
         } else {
             spinner.fail(chalk.cyan(`Fail from:${formName} time:${spanTime}s`));
