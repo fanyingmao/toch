@@ -16,7 +16,7 @@ const splitFlag = '\n';
 let spanTime = 0;
 let startTime = Date.now();
 let source;
-let formName = 'youdao';
+let formName = 'google';
 switch (process.env.TOCH_SOURCE) {
     case 'youdao':
         formName = 'youdao';
@@ -71,10 +71,10 @@ let en = '';
             }
 
             for (let i = 0; i < enArr.length; i++) {
-                // if (enArr[i] && resultArr[i]) {
+                if (enArr[i] && resultArr[i]) {
                     console.log(enArr[i]);
                     console.log(chalk.green(resultArr[i]));
-                // }
+                }
             }
         } else {
             spinner.fail(chalk.cyan(`Fail from:${formName} time:${spanTime}s`));
