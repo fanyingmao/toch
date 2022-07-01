@@ -1,6 +1,6 @@
 {
   "name": "toch",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "将各国语言翻译成中文",
   "main": "index.js",
   "scripts": {

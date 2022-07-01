@@ -16,8 +16,8 @@ const splitFlag = '\n';
 let spanTime = 0;
 let startTime = Date.now();
 let source;
-let formName = 'google';
-switch (process.env.TOCH_SOURCE) {
+let formName = 'youdao';
+switch (formName) {
     case 'youdao':
         formName = 'youdao';
         source = youdao;
